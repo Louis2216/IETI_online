@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETI SAN PEDRO LAGUNA WEBSITE</title>
+    <link rel="stylesheet" href="#">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.php"><img src="images/IETICollegeOfScienceAndTechnology.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="announcement.php">ANNOUNCEMENTS</a></li>
+                    <li><a href="admis.html">ADMISSION</a></li>
+                </li>
+                <li class="dropdown">
+                <a href="#" class="dropbtn">MORE INFO</a>
+               <ul class="dropdown-content">
+               <li><a href="unif.php">School Uniforms</a></li>
+               <li><a href="schoolact.php">School Activities</a></li>
+               <li><a href="facility.php">School Facility</a></li>
+               <li><a href="viewvid.php">Videos</a></li>
+               </ul>
+   
+                    </li>
+                             <li class="dropdown">
+                             <a href="#" class="dropbtn">CONTACT</a>
+                            <ul class="dropdown-content">
+                              <li><a href="regs.html">Inquery</a></li>
+                              <li><a href="admin.php" >Login</a></li>
+                            </ul>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">ABOUT</a>
+                        <ul class="dropdown-content">
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="cert.html">Certifications</a></li>
+                            
+                            
+                    
+        
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        </section>
+
+
+    <main class="content">
+        <div class="text-box">
+            <h1>ADMISSION REQUIREMENTS</h1>
+            <ul>
+                <li>High School Card or Form 137 – Original</li>
+                <li>Transcript of Records – for Transferees</li>
+                <li>Good Moral Character – Original</li>
+                <li>Birth Certificate – Photocopy</li>
+                <li>2 pcs. 1×1 picture (White Background)</li>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        function showMenu() {
+            document.getElementById("navLinks").style.right = "0";
+        }
+
+        function hideMenu() {
+            document.getElementById("navLinks").style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Serif", serif;
+}
+
+
+.header {
+  min-height: 5vh;
+  width: 100%;
+  background-color: #72ac8a;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 100px;
+}
+
+.nav-links {
+  flex: 10;
+  text-align: right;
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  padding: 10px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: hsl(160, 86%, 5%);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #0b925e;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f0f1f0;
+  min-width: 160px;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.dropdown-content li a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #ebdada;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+nav .fa {
+  display: none;
+}
+
+@media(max-width: 700px) {
+  .text-box h1 {
+      font-size: 30px;
+  }
+
+  .nav-links ul li {
+      display: block;
+  }
+
+  .nav-links {
+      position: fixed;
+      background: rgb(20, 204, 13);
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+  }
+
+  nav .fa {
+      display: block;
+      color: hsl(157, 100%, 9%);
+      margin: 10%;
+      font-size: 22px;
+      cursor: pointer;
+  }
+
+  .nav-links ul {
+      padding: 30px;
+  }
+}
+
+
+
+.text-box {
+  padding: 100px; /* Increased padding for more space */
+  background-color: white; /* Background color */
+  border-radius: 15px; /* Slightly increased border radius for softer corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow for depth */
+  margin: 40px auto; /* Increased margin for better spacing */
+  max-width: 800px; /* Increased max-width for larger text box */
+  text-align: center;
+  border: 2px solid #72ac8a; /* Added a border matching the header color */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Add a hover effect */
+.text-box:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Heading Styles */
+.text-box h1 {
+  font-size: 40px; /* Increased font size for better emphasis */
+  margin-bottom: 25px; /* Increased margin below the heading */
+  color: #2c3e50; /* Darker color for better contrast */
+  font-weight: bold; /* Make the font bold */
+}
+
+/* List Styles */
+.text-box ul {
+  list-style-type: none; /* Remove default list styling */
+  padding-left: 0; /* Remove left padding */
+}
+
+.text-box ul li {
+  font-size: 20px; /* Increased font size for better readability */
+  margin: 15px 0; /* Increased margin for better spacing */
+  position: relative; /* Enable positioning for pseudo-elements */
+}
+
+/* Add a dot or icon before each list item */
+.text-box ul li::before {
+  content: "✓"; /* Add a check mark or bullet */
+  color: #72ac8a; /* Color to match the theme */
+  position: absolute; /* Positioning for alignment */
+  left: -10px; /* Adjust position */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .text-box {
+      padding: 30px; /* Adjust padding for smaller screens */
+      margin: 20px auto; /* Adjust margin */
+      max-width: 90%; /* Use more of the screen width */
+  }
+
+  .text-box h1 {
+      font-size: 32px; /* Decrease heading size */
+  }
+
+  .text-box ul li {
+      font-size: 18px; /* Decrease list item size */
+  }
+}
+</style>

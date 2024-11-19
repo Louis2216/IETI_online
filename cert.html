@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETI SAN PEDRO LAGUNA WEBSITE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  
+    <script>
+        // Open the modal and display the clicked image
+        function openModal(img) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = img.src; // Get the source of the clicked image
+        }
+    
+        // Close the modal
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    
+        // Close the modal when clicking outside of the image
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.php"><img src="images/IETICollegeOfScienceAndTechnology.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="announcement.php">ANNOUNCEMENTS</a></li>
+                    <li><a href="admis.html">ADMISSION</a></li>
+                </li>
+                <li class="dropdown">
+                <a href="#" class="dropbtn">MORE INFO</a>
+               <ul class="dropdown-content">
+               <li><a href="unif.php">School Uniforms</a></li>
+               <li><a href="schoolact.php">School Activities</a></li>
+               <li><a href="facility.php">School Facility</a></li>
+               <li><a href="viewvid.php">Videos</a></li>
+               </ul>
+
+                    </li>
+                             <li class="dropdown">
+                             <a href="#" class="dropbtn">CONTACT</a>
+                            <ul class="dropdown-content">
+                                <li><a href="regs.html">Inquery</a></li>
+                                <li><a href="admin.php" >Login</a></li>
+                            </ul>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">ABOUT</a>
+                        <ul class="dropdown-content">
+                            <li><a href="history.html">History</a></li>
+                            <li><a href="cert.html">Certifications</a></li>
+                            
+                            
+                    
+        
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        </section>
+
+
+    <div class="certifications-section">
+        <h1>National Certifications</h1>
+
+        <!-- Row of certifications -->
+        <div class="row">
+            <div class="column">
+                <img src="images/it1.jpg" alt="Consumer Electronics Certification"onclick="openModal(this)">
+                <h2>Electronics Competencies</h2>
+                <p>
+                    Consumer Electronics and Electro-Mechanical Technology<br>
+                    REF and Aircon Servicing (Dom RAC NC II)<br>
+                    Electronic Products Assembly and Servicing (EPAS NC II)<br>
+                    Electrical Installation and Maintenance (EIM NC II)<br>
+                    Mechatronics (NC II)
+                </p>
+            </div>
+
+            <div class="column">
+                <img src="images/it2.jpg" alt="Aircon Servicing Certification"onclick="openModal(this)">
+                <img src="images/it3.jpg" alt="ICT Certification"onclick="openModal(this)">
+                <h2>Information Technology Competencies</h2>
+                <p>
+                    Computer System Servicing (CSS NC II)<br>
+                    Computer Programming (NC IV)<br>
+                    Linux System Administration<br>
+                    Bookkeeping (NC III)
+                </p>
+            </div>
+
+            <div class="column">
+                <img src="images/hotel.jpg" alt="HOTEL AND RESTAURANT SERVICES COMPETENCIES"onclick="openModal(this)">
+                <h2>HOTEL AND RESTAURANT SERVICES COMPETENCIES</h2>
+                <p>
+                    COOKERY (NC II)<br>
+                    FOOD AND BEVERAGES SERVICES (NC II)<br>
+                    FRONT OFFICE SERVICES (NC II)<br>
+                    HOUSEKEEPING (NC II)<br>
+                    BARTENDING (NC II)
+                </p>
+            </div>
+        </div>
+    </div>
+   
+    
+        <!-- Row of certifications with clickable images -->
+        <div class="certifications-section1">
+            <h1>International Certifications</h1>
+        
+            <!-- Row of certifications with bigger images -->
+            <div class="row1">
+                <div class="column1">
+                    <img src="images/intcert.png" alt="International Certification" onclick="openModal(this)">
+                </div>
+        
+                <div class="column1">
+                    <img src="images/cengage.png" alt="Cengage Certification" onclick="openModal(this)">
+                </div>
+        
+                <div class="column1">
+                    <img src="images/ciscocert.png" alt="Cisco Certification" onclick="openModal(this)">
+                </div>
+        
+                <div class="column1">
+                    <img src="images/sapcert.png" alt="SAP Certification" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+        <script>
+            var navLinks = document.getElementById("navLinks");
+    
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+    
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+</body>
+</html>
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Serif", serif;
+}
+
+
+.header {
+  min-height: 5vh;
+  width: 100%;
+  background-color: #72ac8a;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 100px;
+}
+
+.nav-links {
+  flex: 10;
+  text-align: right;
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  padding: 10px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: hsl(160, 86%, 5%);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #0b925e;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f0f1f0;
+  min-width: 160px;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.dropdown-content li a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #ebdada;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+nav .fa {
+  display: none;
+}
+
+@media(max-width: 700px) {
+  .text-box h1 {
+      font-size: 30px;
+  }
+
+  .nav-links ul li {
+      display: block;
+  }
+
+  .nav-links {
+      position: fixed;
+      background: rgb(20, 204, 13);
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+  }
+
+  nav .fa {
+      display: block;
+      color: hsl(157, 100%, 9%);
+      margin: 10%;
+      font-size: 22px;
+      cursor: pointer;
+  }
+
+  .nav-links ul {
+      padding: 30px;
+  }
+}
+  
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.column p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+
+/* Styling for national certifications section */
+.certifications-section {
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    max-width: 30%;
+    min-width: 250px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.column img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Main Section Styling */
+.certifications-section1 {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+.certifications-section1 h1 {
+    font-size: 35px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+/* Adding a line under the heading */
+.certifications-section1 h1::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: #3498db;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Row of Certifications */
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Individual Certification Card */
+.column1 {
+    flex: 1;
+    min-width: 250px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    max-width: 280px;
+    margin: auto;
+}
+
+/* Hover Effect for Certification Cards */
+.column1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styles */
+.column1 img {
+    width: 100%;  /* Keep this as it is for responsive layout */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Image Hover Effect */
+.column1:hover img {
+    transform: scale(1.05);
+}
+
+/* Typography for Image Labels */
+.column1 h2 {
+    font-size: 18px;
+    color: #2980b9;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+
+/* Paragraph for Descriptions */
+.column1 p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .row1 {
+        justify-content: center;
+    }
+
+    .column1 {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .column1 {
+        max-width: 100%;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%; /* Use a percentage for responsiveness */
+    max-height: 80%; /* Ensure it doesn't exceed the viewport height */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Close Button */
+.close {
+    color: white; /* Keep the color white for contrast */
+    float: right;
+    font-size: 32px; /* Increased size */
+    font-weight: bold; /* Keep bold for better visibility */
+    padding: 10px; /* Add padding for easier clicking */
+    border: none; /* Remove any border */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 50%; /* Make it circular */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb; /* Change color on hover */
+    background-color: rgba(255, 0, 0, 0.7); /* Change background color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+
+</style>

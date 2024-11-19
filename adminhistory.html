@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IETI San Pedro Laguna | History & Mission</title>
+    <link rel="stylesheet" href="#">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        // Open the modal and display the clicked image
+        function openModal(img) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = img.src; // Get the source of the clicked image
+        }
+    
+        // Close the modal
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    
+        // Close the modal when clicking outside of the image
+        window.onclick = function(event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+     <script>
+      function logout() {
+          // Display notification before redirecting
+          alert("You have been logged out successfully.");
+          // Redirect to the logout page
+          window.location.href = "index.php"; 
+      }
+      </script>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="adminpagelogout.php"><img src="images/IETICollegeOfScienceAndTechnology.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+
+                  <li class="dropdown">
+                    <a href="#" class="dropbtn">ADMIN</a>
+                   <ul class="dropdown-content">
+                   <li><a href="visitortrack.php">Analytics</a></li>
+                   <li><a href="#" onclick="logout()">Log Out</a></li>
+  
+                   </ul>
+
+                    <li><a href="adminpagelogout.php">HOME</a></li>
+                    <li><a href="adminannouncement.php">ANNOUNCEMENTS</a></li>
+                    <li><a href="adminadmis.html">ADMISSION</a></li>
+                </li>
+                <li class="dropdown">
+                <a href="#" class="dropbtn">MORE INFO</a>
+               <ul class="dropdown-content">
+               <li><a href="adminunif.php">School Uniforms</a></li>
+               <li><a href="adminschoolact.php">School Activities</a></li>
+               <li><a href="adminfacility.php">School Facility</a></li>
+               <li><a href="adminvid.php">Videos</a></li>
+               </ul>
+                    
+                        
+                    </li>
+                             <li class="dropdown">
+                             <a href="#" class="dropbtn">CONTACT</a>
+                            <ul class="dropdown-content">
+                            <li><a href="adminregs.html">Inquery</a></li>
+                            </ul>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">ABOUT</a>
+                        <ul class="dropdown-content">
+                            <li><a href="adminhistory.html">History</a></li>
+                            <li><a href="admincert.html">Certifications</a></li>
+                            
+                            
+                    
+        
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        </section>
+
+    <section class="main-content">
+        <img src="images/misvis.jpg" alt="Mission Vision Image" class="image-banner"onclick="openModal(this)">
+        <div class="text-box">
+            <h1>Our History</h1>
+            <p>
+                IETI College of Science and Technology, San Pedro was established in 1996. It offers technical
+                courses in ITM, CTSM, EST, MEET, and AET, as well as baccalaureate degrees in BS Information Technology
+                and BS in Industrial Technology with majors in Electronics, Industry Electricity Computer,
+                Refrigeration, Airconditioning, and Automotive.
+            </p>
+        </div>
+    </section>
+
+    <section class="mission-vision">
+        <div class="mission">
+            <h3>Our Mission</h3>
+            <p>
+                We produce graduates with internationally recognized certifications, equipping them with the knowledge,
+                technical skills, and attitude to excel in their chosen fields.
+            </p>
+        </div>
+        <div class="vision">
+            <h3>Our Vision</h3>
+            <p>
+                To be the best training institution in Asia Pacific, known for the knowledge, technical skills, and
+                attitude of our faculty, students, and graduates.
+            </p>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div> 
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
+
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Serif", serif;
+}
+
+
+.header {
+  min-height: 5vh;
+  width: 100%;
+  background-color: #72ac8a;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 100px;
+}
+
+.nav-links {
+  flex: 10;
+  text-align: right;
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  padding: 10px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: hsl(160, 86%, 5%);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #0b925e;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f0f1f0;
+  min-width: 160px;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.dropdown-content li a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li a:hover {
+  background-color: #ebdada;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+nav .fa {
+  display: none;
+}
+
+@media(max-width: 700px) {
+  .text-box h1 {
+      font-size: 30px;
+  }
+
+  .nav-links ul li {
+      display: block;
+  }
+
+  .nav-links {
+      position: fixed;
+      background: rgb(20, 204, 13);
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+  }
+
+  nav .fa {
+      display: block;
+      color: hsl(157, 100%, 9%);
+      margin: 10%;
+      font-size: 22px;
+      cursor: pointer;
+  }
+
+  .nav-links ul {
+      padding: 30px;
+  }
+}
+</style>
+
+<style>
+/* Main Content */
+.main-content {
+  padding: 30px 10%;
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  width: 80%;
+  border-radius: 15px;
+}
+
+.image-banner {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.text-box {
+  padding: 20px;
+}
+
+.text-box h1 {
+  font-size: 38px;
+  color: #aa1c1c;
+  margin-bottom: 20px;
+}
+
+.text-box p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 20px 10%;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 15px;
+}
+
+.mission, .vision {
+  flex: 1;
+  padding: 30px;
+  background-color: #e6f5f9;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission:hover, .vision:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mission h3, .vision h3 {
+  font-size: 28px;
+  color: #006c73;
+  margin-bottom: 15px;
+}
+
+.mission p, .vision p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-vision {
+      flex-direction: column;
+  }
+
+  .mission, .vision {
+      margin-bottom: 20px;
+  }
+
+  .header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .page-title {
+      font-size: 26px;
+  }
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%; /* Use a percentage for responsiveness */
+  max-height: 80%; /* Ensure it doesn't exceed the viewport height */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Close Button */
+.close {
+  color: white; /* Keep the color white for contrast */
+  float: right;
+  font-size: 32px; /* Increased size */
+  font-weight: bold; /* Keep bold for better visibility */
+  padding: 10px; /* Add padding for easier clicking */
+  border: none; /* Remove any border */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 50%; /* Make it circular */
+  transition: background-color 0.3s; /* Smooth background change */
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb; /* Change color on hover */
+  background-color: rgba(255, 0, 0, 0.7); /* Change background color on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+</style>
